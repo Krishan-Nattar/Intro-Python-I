@@ -29,6 +29,7 @@ b = (-14, 72)
 
 # Prints "Distance is 66.94"
 print("Distance is: {:.2f}".format(dist(a, b)))
+print(f"Distance is: {dist(a,b):.2f}")
 
 
 
