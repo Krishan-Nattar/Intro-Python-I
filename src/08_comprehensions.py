@@ -48,5 +48,5 @@ y = []
 
 for num in x:
     if int(num) % 2==0:
-        y.append(num)
+        y.append(num.strip())
 print(y)
