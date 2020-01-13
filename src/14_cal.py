@@ -26,18 +26,24 @@ import sys
 import calendar
 from datetime import datetime
 
-userInput = input('Input month [year]: ')
+userInput=sys.argv[1:]
+# print(args)
+
+# userInput = input('Input month [year]: ')
 today = datetime.today()
 
-if userInput=="":
-  print(calendar.prmonth(today.year,today.month))
+if userInput==[]:
+  calendar.prmonth(today.year,today.month)
+  # return
+  # pass
 else:
-  splitString = userInput.split(" ")
-  if len(splitString)==1:
-    print(calendar.prmonth(today.year, int(splitString[0])))
+  # splitString = userInput.split(" ")
+  # print(len(userInput))
+  if len(userInput)==1:
+    calendar.prmonth(today.year, int(userInput[0]))
   else:
-    print(splitString)
-    print(splitString[0])
-    print(splitString[1])
-    print(calendar.prmonth(int(splitString[1]),int(splitString[0])))
+  #   print(splitString)
+  #   print(splitString[0])
+  #   print(splitString[1])
+    calendar.prmonth(int(userInput[1]),int(userInput[0]))
 
