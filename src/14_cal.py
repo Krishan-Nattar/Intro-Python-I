@@ -27,23 +27,17 @@ import calendar
 from datetime import datetime
 
 userInput=sys.argv[1:]
-# print(args)
 
-# userInput = input('Input month [year]: ')
 today = datetime.today()
 
+# If user input nothing, we display the current month/year
 if userInput==[]:
   calendar.prmonth(today.year,today.month)
-  # return
-  # pass
 else:
-  # splitString = userInput.split(" ")
-  # print(len(userInput))
+  # If user input only 1 number, we assume it's the month and display that
   if len(userInput)==1:
     calendar.prmonth(today.year, int(userInput[0]))
+    # We assume that if the previous cases did not render, user has input 2 numbers. Those will be the month and year
   else:
-  #   print(splitString)
-  #   print(splitString[0])
-  #   print(splitString[1])
     calendar.prmonth(int(userInput[1]),int(userInput[0]))
 
